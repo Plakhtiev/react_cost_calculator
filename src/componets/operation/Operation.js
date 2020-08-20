@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Operation({ addTransaction, addDescription, addAmount }) {
+function Operation({ addTransaction, addDescription, addAmount, description, amount }) {
     return (
         <section className="operation">
             <h3>Новая операция</h3>
@@ -10,12 +10,14 @@ function Operation({ addTransaction, addDescription, addAmount }) {
                         type="text"
                         className="operation__fields operation__name"
                         onChange={addDescription}
+                        value={description}
                         placeholder="Наименование операции" />
                 </label>
                 <label>
                     <input type="number"
                         className="operation__fields operation__amount"
                         onChange={addAmount}
+                        value={amount}
                         placeholder="Введите сумму" />
                 </label>
                 <div className="operation__btns">
